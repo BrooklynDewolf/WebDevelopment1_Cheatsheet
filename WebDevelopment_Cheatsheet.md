@@ -947,3 +947,4 @@ a {
 > ```
 >
 > In het bovenstaande voorbeeld zal indien het scherm minimaal 1024px breed is, het main element opgedeeld worden in twee kolommen van 66% en 34% van de breedte van het scherm.
+
