@@ -4,8 +4,6 @@
 
 ## 1.1 Attribute tag
 
----
-
 > Attributen geven extra informatie over een element (naam + waarde)
 
 > In onderstaand voorbeeld is **href** een attribuut.
@@ -18,8 +16,6 @@
 
 ## 1.2 Block level vs inline
 
----
-
 > **Block-elementen** nemen heel de paginabreedte in
 
 > **Inline-elementen** komen na elkaar
@@ -29,8 +25,6 @@
 <br/></br>
 
 ## 1.2 Soorten secties
-
----
 
 > Sinds HTML5 kunnen we verschillende inhoudsblokken makkelijk definiëren met tags. We onderscheiden:
 
@@ -47,8 +41,6 @@
 <br/>
 
 ## 1.3 Hoofdingen
-
----
 
 > Om titels en ondertitels te maken, maken we gebruik van de `<h>` tag.
 
@@ -67,8 +59,6 @@
 
 ## 1.4 Regeleinde
 
----
-
 > Witruimte, regeleinde en tabs worden niet weergegeven in een browser. Daarom gebruiken we de `<br/>` tag om regels af te breken.
 
 ```HTML
@@ -78,8 +68,6 @@
 <br/>
 
 ## 1.5 Speciale opmaaktags
-
----
 
 > Hieronder vind je een lijst van de <cite>meest</cite> belangrijke tags
 
@@ -107,8 +95,6 @@
 <br/>
 
 ## 1.6 Inhoud groeperen
-
----
 
 > We kunnen inhoud groeperen zoals adresgegevens, opsommingslijsten,...
 
@@ -209,8 +195,6 @@
 
 ## 1.7 Koppelingen
 
----
-
 ### 1.7.1 Links
 
 > Het gebruik van hyperlinks in HTML maakt het mogelijk om van de ene webpagina naar een andere te gaan. Dit kan binnen de website zijn, buiten, e-mail clients, telefoonnummer bellen,...
@@ -253,8 +237,6 @@
 
 ## 1.8 Afbeeldingen
 
----
-
 > We kunnen een afbeeldingen weergeven met de `<img>` tag. Dit altijd in combinatie met het `src` attribuut. Het `alt` attribuut is een tekst wanneer de afbeelding niet zichtbaar zou zijn. Met `width` en `height` kan je de afmetingen doorgeven. De browser weet dan wat er komt. NIET OM TE SCHALEN!
 
 ```HTML
@@ -277,8 +259,6 @@
 <br/>
 
 ## 1.9 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Tabellen</a>
-
----
 
 > Iedere tabel start met de root tag `<table>`. Daaronder komen rijen met de `<tr>` tag en daarin kolommen met de `<td>` tag (je definiëert dus per rij, kolommen).
 
@@ -353,8 +333,6 @@
 <br/>
 
 ## 1.10 [Formulieren](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
-
----
 
 > Met de `<form>` tag kunnen we een inputformulier maken. Met het attribuut `action` zeggen we naar welke URL het formulier moet gestuurd worden. Met het attribuut `method` zeggen we de methode van versturen. Dit of `get` (toevoegen aan url) of `post` (toevoegen aan header van HTTP request).
 
@@ -437,8 +415,6 @@
 
 ## 2.1 De plaatsing van CSS
 
----
-
 > We kunnen CSS op verschillende manieren implementeren.
 > <br/>- In een external stylesheet met `<link rel="stylesheet" href="css/stijlen.css">`.
 > <br/>- In het HTML document zelf met de `<style>` tag.
@@ -451,8 +427,6 @@
 <br/>
 
 ## 2.2 [CSS eenheden](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-
----
 
 > CSS heeft verschillende eenheden. Hieronder een korte opsomming.
 > <br/> **Absolute eenheden** <br/>- `px`: CSS pixel, optische referentie-eenheid
@@ -467,8 +441,6 @@
 <br/>
 
 ## 2.3 Verwerking van CSS door de browser
-
----
 
 > Als er meerdere waarden zijn toegewezen aan een property, zal de browser de meest specifieke kiezen. In het onderstaande geval zal de kleur dus rood zijn.
 
@@ -511,8 +483,6 @@ div {
 
 ## 2.4 Overerving
 
----
-
 > Een opmaakeigenschap hoeft niet rechtstreeks een waarde te krijgen. De waarde kan overgeerfd worden van het ouderelement.
 
 > Zonder de onderstaande CSS zal de `<em>` tag de tekst gewoon cursief maken (overerving van een ouderelement). Als we de onderstaande CSS dan wel gebruiken, zal hij de tekst tussen de `<em>` tags ook blauw maken.
@@ -541,11 +511,7 @@ h2 { color: inherit; }
 
 ## 2.5 [Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
----
-
 ### 2.5.1 Basisselectors
-
----
 
 > **Basisselector (A)**<br/>
 > Ieder `<p>` element zal groen kleuren.
@@ -587,8 +553,6 @@ span.klasse1 {
 ```
 
 ### 2.5.2 Combinatieselectors
-
----
 
 > **Combinatieselector (A>B)** <br/>
 > Ieder `<p>` element waarvan de rechtstreekse parent een `<div>` element is zal blauw kleuren.
@@ -646,8 +610,6 @@ div,p {
 
 ### 2.5.3 Attribuutselectors
 
----
-
 | Teken | Beschrijving              | Voorbeeld            | Betekenis voorbeeld                                                                    |
 | ----- | ------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
 |       |                           | img[alt]             | elk element img met attribuut alt                                                      |
@@ -661,8 +623,6 @@ div,p {
 <br/>
 
 ### 2.5.4 [Pseudoklassen](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
-
----
 
 > Pseudoklassen duiden een toestand van een element aan.
 
@@ -722,8 +682,6 @@ a::before {
 
 ## 2.6 [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
 
----
-
 > **Enkele CSS properties**
 >
 > - [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background) achtergrondskleur
@@ -742,13 +700,9 @@ a::before {
 
 ## 2.7 [Boxmodel](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model)
 
----
-
 > Een HTML-pagina is opgebouwd uit blokken. Deze blokken worden bovenop mekaar geplaatst. Een box bestaat uit `content` (bv. tekst), `padding` (ruimte rond het content) een `border` (de rand rond de `padding`) en de `margin` (ruimte rond de border).
 
 ### 2.7.1 Box-sizing
-
----
 
 > Er zijn 2 mogelijke manieren van [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing):
 >
@@ -777,8 +731,6 @@ a::before {
 
 ### 2.7.2 Marges
 
----
-
 > Marges ingesteld worden op 2 manieren:
 >
 > - [`margin-top`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top)[`/right`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-right)[`/bottom`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom)[`/left`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left)
@@ -805,8 +757,6 @@ margin: 2px 1em 0 auto;
 
 ### 2.7.3 Borders
 
----
-
 > Van een border kunnen we 3 waarden instellen:
 >
 > - [`border-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-width) (px, %, em, rem, thin, medium, thick)
@@ -825,8 +775,6 @@ margin: 2px 1em 0 auto;
 
 ### 2.7.4 Overflow
 
----
-
 > Overflow treedt op indien de content te groot wordt voor de box. Dit kan enkel als een breedte of hoogte is ingesteld. Wat er met die inhoud gebeurt hangt af van de waarde die wordt toegekend aan [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow).
 >
 > - [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) (visible/hidden/scroll/auto)
@@ -834,8 +782,6 @@ margin: 2px 1em 0 auto;
 <br/>
 
 ### 2.7.5 Weergavemodel - display
-
----
 
 > De indeling van boxes wordt bepaald door de [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) eigenschap. Er wordt een onderscheid gemaakt tussen:
 >
@@ -846,8 +792,6 @@ margin: 2px 1em 0 auto;
 <br/>
 
 ### 2.7.6 Visibility
-
----
 
 > Je kan makkelijk een element verbergen door de [`visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) eigenschap op `hidden` te zetten. Er wordt wel nog steeds een box aangemaakt en bestaat ook in de boomstructuur. Het wordt niet weergegeven in de browser, maar de ruimte nodig voor de box wordt wel gereserveerd op het scherm. Als je de [`visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) op `collapse` zet wordt er ook geen ruimte gereserveerd.
 
@@ -861,8 +805,6 @@ a {
 
 ## 2.8 Lay-out positionering
 
----
-
 > Elk blok krijgt een positie toegewezen in het omvattende blok (containing blok). Schema's:
 >
 > - **normale flow** - plaatsing afhankelijk van [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) waarde
@@ -870,8 +812,6 @@ a {
 > - **absolute positionering**: krijgt absolute positie ten opzichte van de eerste niet static omvattende blok.
 
 ### 2.8.1 Position & offset
-
----
 
 > [`Position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position) **eigenschap**
 >
@@ -907,8 +847,6 @@ a {
 
 ### 2.8.2 [Float](https://developer.mozilla.org/en-US/docs/Web/CSS/float) & [clear](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
 
----
-
 > Door [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float) (left/right) te gebruiken haal je het blok uit de normale flow en kan de inhoud van de onderliggende blokken erom heen lopen. <br/>Voorbeeld met `float: left`: <br/> <img src="images/float_left.png" width="150px">
 
 > Door [`clear`](https://developer.mozilla.org/en-US/docs/Web/CSS/clear) (none/left/right/both) te gebruiken kan men voorkomen dat de inhoud er rond loopt. Bij het gebruik van `clear` komt de inhoud van onderliggende blokken er onder te liggen. <br/> Voorbeeld met `clear: left`: <br/> <img src="images/clear_left.png" width="150px">
@@ -918,8 +856,6 @@ a {
 <br/>
 
 ## 2.9 Responsive design
-
----
 
 > **Responsive design: [media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) queries** <br/>
 > We koppelen opmaak aan eigenschappen van een device.
@@ -947,4 +883,221 @@ a {
 > ```
 >
 > In het bovenstaande voorbeeld zal indien het scherm minimaal 1024px breed is, het main element opgedeeld worden in twee kolommen van 66% en 34% van de breedte van het scherm.
+
+## 2.10 Lay-out: [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+
+> [Extra leermateriaal](https://gridbyexample.com/learn/) **(aangeraden**)
+
+### 2.10.1 Grids aanmaken
+
+> **Creëren van een _grid container_ element**
+>
+> - `display: grid` block-level grid
+> - `display: inline-grid` inline-level grid
+
+```CSS
+#grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50px 1fr;
+  gap: 10px;
+}
+```
+
+> **Definiëren van de grid**
+>
+> - [`grid-template-rows`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows) Rijen definiëren (aantal en hoogte)
+> - [`grid-template-columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns) Kolommen definiëren (aantal en breedte)
+> - [`grid-template-areas`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas) Area definiëren
+> - `gap` Ruimte tussen grid-elementen
+
+```CSS
+#page {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas: "head head"
+                       "nav  main"
+                       "nav  foot";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr;
+}
+```
+
+> **Gebruik van de [`repeat()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()>) functie** <br/>
+> Met de [`repeat()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()>) functie kan je een deel van een 'track list' herhalen. Zo kan met in plaats van:
+>
+> ```CSS
+> grid-template-columns: 1fr 1fr 1fr;
+> ```
+>
+> Gebruik maken van:
+>
+> ```CSS
+> grid-template-columns: repeat(3, 1fr)
+> ```
+>
+> Het eerste getal geeft het aantal keer herhalen weer. Een meer uitgebreid voorbeeld:
+>
+> ```CSS
+> grid-template-columns: 20px repeat(4, 1fr 2fr);
+> ```
+>
+> Is hetzelfde dan:
+>
+> ```CSS
+> grid-template-columns: 20px 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+> ```
+>
+> Note: de eenheid `fr` is een flexibele ruimte die de overgebleven ruimte inneemt. Bij dus `2fr 1fr` zal 2 delen aan de eerste waarde gegeven worden en 1 deel aan de tweede waarde.
+>
+> Bij de `repeat()` functie kan men ook gebruik maken van `auto-fill` en `auto-fit` <br/>
+> Hier zal de browser zelf het aantal kolommen of rijen bepalen aan de hand van de beschikbare ruimte van de container.
+>
+> ```CSS
+> grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+> ```
+>
+> Bij bovenstaand stuk CSS zal de browser de blokken naast elkaar zetten tot de elk minder dan 150px ruimte over hebben. Dan zal de browser de blokken beginnen te verzetten naar volgende rij. Hebben ze meer ruimte dan 150px, dan verdelen ze de ruimte.
+> <br/>Het verschil tussen `auto-fill` en `auto-fit`, is dat bij `auto-fill` de browser kolommen zal blijven aanmaken. `auto-fit` zal de kolommen gewoon uitrekken. Onderstaande afbeelding maakt dit duidelijk. [(bron)](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) <img src="images/autofillfit.png" width="500px">
+
+<br/>
+
+> **Expliciet en impliciet raster** <br/>
+> Bij een **expliciet raster** definiëren we **manueel** de columns en rijen met de `grid-template-*` eigenschap (bovenstaand). <br/>
+>
+> Bij een **impliciet raster** zijn gedefiniëerde rijen en kolommen standaard 'auto-sized', maar je kan hiervoor een hoogte/breedte instellen via de properties [`grid-auto-rows`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows) en [`grid-auto-columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns). Een impliciet raster is het raster buiten het bereik van het expliciet raster. Voorbeeld (items 1 en 2 liggen in het impliciet grid):
+> <img src="images/implicitgrid.png" width=500px>
+
+> **Afmetingen tracks** <br/>
+> Mogelijke afmetingen instellen voor tracks (lentewaarden px % fr):
+>
+> - [`max-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-content) lengte van de maximale content van het element
+> - [`min-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-content) lengte van de minimale content van het element (bv. 1 woord van een zin)
+> - [`minmax(min,max)`](<https://developer.mozilla.org/en-US/docs/Web/CSS/minmax()>) Vaak gebruikt bij grid-elementen, stelt de minimale en maximale waarde in van bv. een kolom
+> - `fit-content(value)` zorgt er voor dat de content past door deze te verlenger naar onder toe
+> - `auto`
+
+<br/>
+
+### 2.10.2 Plaatsen van elementen op raster
+
+> **Rijen**
+>
+> - [`grid-row-start`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start) startrij van het element
+> - [`grid-row-end`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start) eindrij van het element
+> - `grid-row` afgekorte versie voor rijspan (bv. `1 / 3`)
+>
+> In het onderstaande voorbeeld kan `grid-row-end: 3` ook als `grid-row-end: span 2` geschreven worden.
+
+```CSS
+#item1 {
+  background-color: lime;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#item2 {
+  background-color: yellow;
+  grid-row: 2 / 4;
+}
+```
+
+> **Kolommen**
+>
+> - `grid-column-start` startkolom van element
+> - `grid-column-end` eindkolom van element
+> - `grid-column` afgekorte versie voor kolomspan (bv. `1 / 2`)
+>
+> In het onderstaande voorbeeld kan `grid-column-end: 3` ook als `grid-column-end: span 2` geschreven worden.
+
+```CSS
+#item1 {
+  background-color: lime;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#item2 {
+  background-color: yellow;
+  grid-column: 2 / 4;
+}
+```
+
+> **Grid area** <br/>
+> We gebruiken [`grid-area`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area) om het element op een specifiek gedefiniëerde area (met [`grid-template-areas`](https://developer.mozilla.org/en-US/docs/Glossary/Grid_areas)) en om zowel de span van kolommen als rijen tegelijk te definiëren.
+>
+> - `grid-area`: rowstart/columnstart/rowend/columnend
+>
+> ```CSS
+> #item1 {
+>  background-color: lime;
+>  grid-area: 2 / 2 / auto / span 3;
+> }
+> ```
+>
+> - `grid-area`: areaid
+>
+> ```CSS
+> #item2 {
+>  background-color: green;
+>  grid-area: a;
+> }
+> ```
+>
+> <br/>
+
+<br/>
+
+> **Ruimte tussen tracks**
+>
+> - [`column-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap) ruimte tussen kolommen
+> - [`row-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap) ruimte tussen rijen
+> - [`gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/gap) ruimte tussen zowel kolommen als rijen (rij, kolom) (beide)
+
+<br/>
+
+### 2.10.3 Uitlijnen
+
+> Er zijn 2 mogelijke uitlijningen
+>
+> - Uitlijnen van grid in zijn container
+>   - [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) (start/center/space-between/space-around/space-evenly) horizontaal uitlijnen
+>   - [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) (start/center/space-between/space-around) verticaal uitlijnen
+> - Uitlijnen van een item in een grid-cell/track/area
+>   - Alle items in grid (flexbox, declaratie in container element)
+>     - [`justify-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items) horizontaal uitlijnen
+>     - [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) verticaal uitlijnen
+>   - Éen item zelf (declaratie in specifieke item)
+>     - [`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self) horizontaal uitlijnen
+>     - [`aligin-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) verticaal uitlijnen
+>
+> Voorbeeld: <br/> <img src="images/uitlijning.png" width="650px">
+
+<br/>
+
+## 2.11 [Flex container](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+### 2.11.1 Aanmaken van een **flex container**
+
+> Je creëert een **flex container**-element met
+>
+> - `display: flex`
+> - `display: inline-flex`
+>
+> Alle directe kindelementen worden **flexitems**.
+
+<br/>
+
+### 2.11.2 Richting items
+
+> **Flex containers** hebben een **main axis** en een **cross axis**. <br/>
+> Standaard gaat de _main axis_ van links naar echts en de _cross axis_ van boven naar onder. Dit kan aangepast worden met de [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction) (row, row-reverse, column, column-reverse) property.
+
+> De container wordt opgevuld langs de **main-axis**.
+> <br/> <img src="images/flexcontainer.png" width=500px>
+
+> **Overflow** <br/>
+> Overflow van inhoud wordt geregeld met [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (nowrap/wrap/wrap-reverse).
+> <br/> Afgekort [`flew-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow).
 
