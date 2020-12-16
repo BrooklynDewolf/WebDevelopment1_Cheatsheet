@@ -869,6 +869,10 @@ a {
 > - **floats**: vlottend/zwevend (links/rechts), uit normale flow gehaald
 > - **absolute positionering**: krijgt absolute positie ten opzichte van de eerste niet static omvattende blok.
 
+### 2.8.1 Position & offset
+
+---
+
 > [`Position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position) **eigenschap**
 >
 > - `static` (standaard) <br/>
@@ -877,3 +881,69 @@ a {
 >   Het element wordt gepositioneerd volgens zijn positie in de normale flow. Offsets zijn dus relatief aan zijn flow positie. <br/> <img src="images/relative.png" width=100px>
 > - `absolute` <br/>
 >   Het element wordt uit de normale flow gehaald en er wordt dus geen plaats voorzien. Zijn positie is relatief aan zijn voorouder (content area). <br/> <img src="images/absolute.png" width=100px>
+> - `fixed` <br/>
+>   Het element wordt uit de normale flow gehaald en er wordt dus geen plaats voorzien. Zijn positie is relatief aan de [`viewport`](https://developer.mozilla.org/en-US/docs/Glossary/viewport). Dit betekent dat bij scrollen het element blijft staan.
+> - `sticky` <br/>
+>   Het element varieert tussen `relative` en `fixed` afhankelijk van de scrollpositie. Zijn positie is relatief aan zijn dichtsbijzijnde scrolling voorouder (bijvoorbeeld een element met scrollbar door overflow). Als je verder scrollt zal deze blijven plakken en meegaan als `fixed` element.
+
+> **Offset eigenschap**
+>
+> - [`top`](https://developer.mozilla.org/en-US/docs/Web/CSS/top), [`right`](https://developer.mozilla.org/en-US/docs/Web/CSS/right), [`bottom`](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom), [`left`](https://developer.mozilla.org/en-US/docs/Web/CSS/left) <br/>
+>   We gebruiken offsets om een element te positioneren afhankelijk van zijn relatieve positie (viewport, voorouder,...) <br/>Voorbeeld:
+>
+> ```CSS
+> div.absolute {
+>  position: absolute;
+>  top: 80px;
+>  right: 0;
+>  width: 200px;
+>  height: 100px;
+> }
+> ```
+>
+> Je kan hier een eenheid achter zetten (zie 2.2).
+
+<br/>
+
+### 2.8.2 [Float](https://developer.mozilla.org/en-US/docs/Web/CSS/float) & [clear](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+
+---
+
+> Door [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float) (left/right) te gebruiken haal je het blok uit de normale flow en kan de inhoud van de onderliggende blokken erom heen lopen. <br/>Voorbeeld met `float: left`: <br/> <img src="images/float_left.png" width="150px">
+
+> Door [`clear`](https://developer.mozilla.org/en-US/docs/Web/CSS/clear) (none/left/right/both) te gebruiken kan men voorkomen dat de inhoud er rond loopt. Bij het gebruik van `clear` komt de inhoud van onderliggende blokken er onder te liggen. <br/> Voorbeeld met `clear: left`: <br/> <img src="images/clear_left.png" width="150px">
+
+> Voor volledige pagina lay-outs gebruiken we eerder `flex` en `grid`.
+
+<br/>
+
+## 2.9 Responsive design
+
+---
+
+> **Responsive design: [media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) queries** <br/>
+> We koppelen opmaak aan eigenschappen van een device.
+>
+> - [`media`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) queries:
+>   - **apparaat type** (all, screen, print, speech)
+>   - **media kenmerken** (breedte, orientatie)
+>   - **een blok** van stijlregels die geldig izjn voor het gedeclareerde apparaat type en de media kenmerken
+>
+> ```CSS
+> @media apparaat and (media feature) {
+>  selector {
+>    declaraties;
+>  }
+> }
+> ```
+>
+> ```CSS
+> @media screen and (min-width: 1024px) {
+>  main {
+>    display: grid;
+>    grid-template-columns: 66% 34%;
+>  }
+> }
+> ```
+>
+> In het bovenstaande voorbeeld zal indien het scherm minimaal 1024px breed is, het main element opgedeeld worden in twee kolommen van 66% en 34% van de breedte van het scherm.
