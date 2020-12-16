@@ -1078,6 +1078,8 @@ a {
 
 ## 2.11 [Flex container](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
+> [Handige website](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ### 2.11.1 Aanmaken van een **flex container**
 
 > Je creëert een **flex container**-element met
@@ -1099,5 +1101,139 @@ a {
 
 > **Overflow** <br/>
 > Overflow van inhoud wordt geregeld met [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (nowrap/wrap/wrap-reverse).
-> <br/> Afgekort [`flew-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow).
+> <br/> Afgekort [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow).
 
+### 2.11.3 Uitlijning
+
+> De uitlijning is op dezelfde manier van `grid`.
+> Er zijn 2 mogelijke uitlijningen
+>
+> - Uitlijnen van grid in zijn container
+>   - [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) (start/center/space-between/space-around/space-evenly) uitlijnen langs main axis
+>   - [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) (start/center/space-between/space-around) uitlijnen langs cross axis
+> - Uitlijnen van een item in een grid-cell/track/area
+>   - Alle items in grid (flexbox, declaratie in container element)
+>     - [`justify-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items) (stretch/start/center/end/base-line) uitlijnen langs main axis
+>     - [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) (stretch/start/center/end/base-line) uitlijnen langs cross axis
+>   - Éen item zelf (declaratie in specifieke item)
+>     - [`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self) (stretch/start/center/end/base-line) uitlijnen langs main axis
+>     - [`aligin-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) (stretch/start/center/end/base-line) uitlijnen langs cross axis
+
+<br/>
+
+### 2.11.4 Volgorde items & grootte
+
+> Men kan de volgorde van items wijzigen met de [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order) eigenschap (op item niveau).
+
+> De initiële grootte van een flex item kan ingesteld worden met [`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis).
+
+> Flex items kunnen groeien of krimpen als er extra plaats (nodig) is in de container. Dit doen we met [`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) en [`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink). Als deze waarde 0 is, kan deze niet groeien of krimpen. Vanaf >0 kan dit wel. <br/>
+> De afgekorte versie hiervan is gewoon [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
+>
+> ```CSS
+> flex-grow: 2;
+> flex-shrink 1;
+> flex-basis: auto;
+> ```
+>
+> wordt:
+>
+> ```CSS
+> flex: 2 1 auto;
+> ```
+>
+> <br/>
+
+<br/>
+
+### 2.11.5 Marges
+
+> In het onderstaande voorbeeld staat `margin` op `auto` (standaardwaarde).
+
+<table>
+<tr>
+<th>HTML</th>
+<th>CSS</th>
+</tr>
+<tr>
+<td>
+
+```HTML
+<ul>
+  <li>Branding</li>
+  <li>Home</li>
+  <li>Services</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+```
+
+</td>
+<td>
+
+```CSS
+ul {
+  display: flex;
+}
+
+li {
+  flex: 0 0 auto;
+}
+```
+
+</td>
+</tr>
+</table>
+<br/>
+<img src="images/menubar1.png" width=600px>
+
+<br/>
+
+> In het onderstaande stellen we de rechtermarge in op `auto`.
+
+<table>
+<tr>
+<th>HTML</th>
+<th>CSS</th>
+</tr>
+<tr>
+<td>
+
+```HTML
+<ul>
+  <li>Branding</li>
+  <li>Home</li>
+  <li>Services</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+```
+
+</td>
+<td>
+
+```CSS
+ul {
+  display: flex;
+}
+
+li {
+  flex: 0 0 auto;
+}
+li:nth-child(1) {
+  margin-right: auto;
+}
+```
+
+</td>
+</tr>
+</table>
+<br/>
+<img src="images/menubar2.png" width=600px>
+
+> In het laatste voorbeeld zetten we ook de linkermargin op `auto`.
+
+<img src="images/menubar3.png" width=600px>
+
+<br/>
+<br/>
