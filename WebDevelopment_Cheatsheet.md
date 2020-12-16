@@ -1237,3 +1237,178 @@ li:nth-child(1) {
 
 <br/>
 <br/>
+
+## 2.12 Tekst en typografie
+
+### 2.12.1 Lettertype
+
+> Als je custom lettertypes wilt gebruiken zijn er 2 opties om deze op een webpagina te gebruiken.
+>
+> - Beschik je over fysieke bestanden:
+>   - Download alle varianten
+>   - Plaats deze op de webserver in een aparte folder
+>   - Gebruik [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) in CSS om lettertypes beschikbaar te maken
+> - Beschik je over een embedcode:
+>   - Zoek bv. een [Google Font](https://fonts.google.com/) en kies de gewenste stijlen
+>   - Kopieer de embedcode
+>     - Plaats dit in `head` van HTML pagina
+>     - Of `@import` regel in de CSS
+
+> **Eigenschappen van lettertypes**
+>
+> - [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family) geprioritiseerde lijst van lettertypes
+> - [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) grootte van het lettertype
+> - [`font-size-adjust`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size-adjust) om de tekstgrootte gelijk te houden wanneer wordt teruggevallen op een 2de,.. keus in de font-family
+> - [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) regelafstand, hoeveelheid wit tussen regels tekst
+> - [`font-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight) de vetheid, 100-900 of `normal`, `bold`, `bolder`, `lighter`
+> - [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style) weergave tekst, zoals normal, italic of oblique
+> - [`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant) kleinkapitaal, zoals small-caps
+> - [`font-stretch`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch) uitrekken of indrukken
+> - [`font`](https://developer.mozilla.org/en-US/docs/Web/CSS/font) de verzameleigenschap: _font-style font-variant font-weight font-size/line-height font-family_
+
+<br/>
+
+### 2.12.2 Teksteigenschappen
+
+> **Eigenschappen van tekst** <br/>
+>
+> - [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) kleur
+> - [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) uitlijnen (left, right, center, justify,..)
+> - [`text-align-last`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align-last) uitlijnen laatste regel
+> - [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) lijneffect
+> - [`text-indent`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent) inspringen van de eerste regel van een tekstblok
+> - [`text-orientation`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation) horizontale of verticale tekst
+> - [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow) overlopende tekst, bepaald welk visueel effect de gebruiker krijgt als er meer tekst is dna hij ziet
+> - [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow) schaduw
+> - [`text-transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform) hoofdletters, kleine letters,..
+> - [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) witruimte al dan niet behouden
+> - [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) ruimte tussen letters
+> - [`word-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing) ruimte tussen woorden
+> - [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) automatisch afbreken
+> - [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap) is afbreken van een woord toegestan
+
+<br/>
+
+### 2.12.3 Lijstopmaak
+
+> **Eigenschappen voor lijstopmaak**
+>
+> - [`list-style-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type) opsommingsteken
+> - [`list-style-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image) afbeelding als opsommingsteken
+> - [`list-style-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position) plaatsing opsommingsteken
+> - [`list-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style) afkorting
+
+<br/>
+
+## 2.13 [Kleuren](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+
+> Kleuren kunnen op 4 manieren omschreven worden:
+>
+> - een rgb(a)-code: `rgba(145,233,12,0.7)` (red, green, blue, (opacity))
+> - een (verkorte) hex-code: `#1e85af`
+> - keyword: `red`, `green`, `blue`
+> - een hsl(a)-code: `hsl(0, 100%, 100%)` (hue, saturation, lightness, (opacity))
+>
+> [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity): transparantie (waarde tussen 0 en 1)
+
+<br/>
+
+### 2.13.1 Kleurverlopen
+
+> **Kleurverlopen**
+>
+> - [`linear-gradient`](<https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()>) lineair verloop (bv. links naar rechts, boven naar onder)
+> - [`radial-gradient`](<https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient()>) radiaal verloop
+>
+> Het gemakkelijkste is om hier een [generator](https://cssgradient.io/) voor te gebruiken.
+> <br/>
+
+## 2.14 [Achtergrond](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+
+> Iedere box van een element heeft een achtergrond, default transparent
+>
+> - [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) achtergrondkleur
+> - [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) de afbeelding
+> - [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat) herhalen van de afbeelding tot alle ruimte in het blok is gevuld
+> - [`background-attachment`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment) een afbeelding schuift standaard mee met de rest van de pagina, maar je kan hem ook vastzetten
+> - [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position) plaatsing
+> - [`background-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip) weergave overloop
+> - [`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin) plaatsing
+> - [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) schalen
+> - [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background) verkorte versie
+
+<br/>
+
+## 2.15 [Afgeronde hoeken](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+
+> Men kan de hoeken van elementen afronden. Dit doen we met:
+>
+> - [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) alle hoeken afronden
+> - [`border-top-left-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius) linksboven afronden
+> - [`border-top-right-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-right-radius) rechtsboven afronden
+> - [`border-bottom-left-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius) linksonder afronden
+> - [`border-bottom-right-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius) rechtsonder afronden
+>
+> Hier bestaat ook een [generator](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator) voor.
+
+## 2.16 Randafbeeldingen
+
+> Beeld voor de rand van een element
+>
+> - [`border-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image) afgekorte versie
+> - [`border-image-source`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-source) de afbeelding
+> - [`border-image-slice`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice) opdelen van beeld in regio's
+> - [`border-image-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-width) breedte
+> - [`border-image-outset`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-outset) de afstand waarmee de randafbeelding wordt uitgezet ten opzichte van zijn randkader
+> - [`border-image-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-repeat) hoe vult het beeld de rand
+>
+> Hier bestaat eveneens een [generator](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator) voor.
+
+## 2.17 Boxshadow
+
+> [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) schaduw onder een element
+>
+> Hier bestaat een [generator](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator) voor.
+
+<br/>
+
+## 2.18 Clip path
+
+> [`clip-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path) definieert een gebied/vorm en alles daarbuiten wordt weggeknipt
+>
+> Hier bestaat een [generator](https://bennettfeely.com/clippy/) voor.
+
+<br/>
+
+## 2.19 Beeldfilters en kleuren mengen
+
+> **Beeldfilters**
+>
+> - [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) toepassen van grafische effecten, zoals blur of color shift, op afbeeldingen
+
+> **Kleuren mengen**
+>
+> - [`background-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode) mengen van achtergrondsafbeeldingen en achtergrondskleur element
+> - [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) inhoud van element mengne met zijn achtergrond en inhoud ouderelementen
+
+<br/>
+
+## 2.20 CSS variabelen en rekenen
+
+> **Rekenen** <br/>
+> Je kan `+`, `-`, `*` en `/` gebruiken met alle eenheden.
+
+> **De functie `var()`**
+> Je kan globale variabelen definiëren in het `:root` element (zie voorbeeld).
+>
+> ```CSS
+> :root {
+>  --main-bg-color: pink;
+> }
+>
+> body {
+>  background-color: var(--main-bg-color)
+> }
+> ```
+>
+> Dit doen we met een [`property value`](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
