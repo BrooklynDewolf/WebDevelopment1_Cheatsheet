@@ -300,12 +300,6 @@
 
 <br/>
 
-<style>
-    table, td, th {
-        border: 1px solid white;
-    }
-</style>
-
 <table>
     <tr>
         <td rowspan="2">Kolom 1.1</td>
@@ -967,7 +961,7 @@ a {
 > Bij een **expliciet raster** definiëren we **manueel** de columns en rijen met de `grid-template-*` eigenschap (bovenstaand). <br/>
 >
 > Bij een **impliciet raster** zijn gedefiniëerde rijen en kolommen standaard 'auto-sized', maar je kan hiervoor een hoogte/breedte instellen via de properties [`grid-auto-rows`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows) en [`grid-auto-columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns). Een impliciet raster is het raster buiten het bereik van het expliciet raster. Voorbeeld (items 1 en 2 liggen in het impliciet grid):
-> <img src="images/implicitgrid.png" width=500px>
+> <br/> <img src="images/implicitgrid.png" width=500px>
 
 > **Afmetingen tracks** <br/>
 > Mogelijke afmetingen instellen voor tracks (lentewaarden px % fr):
@@ -1412,3 +1406,144 @@ li:nth-child(1) {
 > ```
 >
 > Dit doen we met een [`property value`](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
+
+<br/>
+
+# 3. SASS
+
+> [SASS](https://sass-lang.com/guide) is een CSS extension language. Het voegt extra features toe aan CSS. Tot voor kort ondersteunde CSS geen variabelen, maar in SASS bestaan variabelen al meer dan 10 jaar. SASS biedt naast variabelen ook nog andere features zoals interpolation, nested rules, mixins, functions, partials,... aan.
+
+> Voor SASS hebben we een preprocessor nodig, zoals 'Live Sass Compiler'. We schrijven deze code in een `.scss` bestand. Door op `Watch Sass` zal het bestand omgezet worden naar een normaal css bestand.
+
+## 3.1 Variabelen
+
+> Men kan makkelijk variabelen maken met een `$` teken. Voorbeeld: <br/>
+
+```SCSS
+// Variabelen
+$primary-color: rgb(173, 178, 247);
+$light: white;
+$font: Calibri, sans-serif;
+$nav-link-color: white;
+
+//Basis stijlen
+
+body {
+  font-family: $font;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+body, header {
+  background-color: $primary-color;
+}
+
+//...
+```
+
+> Vergeet geen link te leggen naar het **CSS** bestand vanuit HTML.
+
+<br/>
+
+## 3.2 Nested rules
+
+> Met SASS kan je stijlregels nesten. Zo kan je onderstaande code
+
+### 3.2.1 Descending selector
+
+```CSS
+nav ul {
+  ...
+}
+nav a {
+  ...
+}
+```
+
+> Als volgt schrijven:
+
+```SCSS
+nav {
+  ul {
+    ...
+  }
+
+  a {
+    ...
+  }
+}
+```
+
+<br/>
+
+### 3.2.2 Parent selector
+
+> Met het `&` teken kan men de parent selecteren in een nesting. Voorbeeld:
+
+```SCSS
+nav {
+  a {
+    display: block;
+    color: $nav-link-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+```
+
+> `&:hover` staat in dit geval gelijk aan `nav a:hover`
+
+<br/>
+
+## 3.3 Partials
+
+> Als je veel CSS `@import`-statements gebruikt dan kan dit het laden van de CSS in de browser vertragen. We doen dit beter uit slechts één file. <br/>
+> We kunnen in de main SCSS klasse bv. `@import "variables"` zetten. Dan zal de file genaamd `_variables.scss` door de compiler meegecompiled worden in 1 klasse. Je kan zo veel import regels doen als je wilt. <br/> **Note:** de naam van een partial scss file moet met een `_` beginnen.
+
+<br/>
+
+# 4. Bootstrap
+
+> Bootstrap is een CSS-framework om op een eenvoudige en snelle manier een responsive website te maken. Er zijn twee manieren om bootstrap te gebruiken.
+>
+> - **Compiled version** <br/>
+>   Als we werken met de compiled version kan met Bootstrap gewoon zien als een CSS file (ev. met javascript).
+> - **Source files** <br/>
+>   Het is ook mogelijk om met de .SCSS source files te werken en zelf het framework aan te passen.
+>
+> We maken zelf meestal gebruik van gewoon de [`bootstrap.css`](https://getbootstrap.com/docs/4.5/getting-started/download/) file.
+
+## 4.1 Containers
+
+> Om de webpagina van enige padding te voorzien en om eventueel de inhoud te centreren moet je een bootstrap container gebruiken. We voegen dus `class="container"` toe aan bv. een `<div>` element. Naar mate je venster vergroot/verkleint zal de container zich aanpassen.
+
+## 4.2 Bootstrap grid system
+
+> Het bootstrap grid system gebruikt `containers`, `rows` en `columns`. Op onderstaande foto zie je hoe dit in zijn werk gaat.
+> <br/> <img src="images/bootstrapgrid.png" width=500px>
+
+## 4.3 Content
+
+### 4.3.1 [Reboot](https://getbootstrap.com/docs/4.5/content/reboot/)
+
+> Bootstrap maakt gebruik van een reboort-file die gebaseerd is op `normalize.css`. Je kan dit controleren door `bootstrap-reboot.css` eens te openen in VSCode.
+
+<br/>
+
+### 4.3.2 [Afbeeldingen](https://getbootstrap.com/docs/4.5/content/images/)
+
+> We kunnen afbeeldingen makkelijk responsive maken door aan het `<img>` element de bootstrap klasse `img-fluid` toe te wijzen.
+
+## 4.4 Componenten
+
+### 4.4.1 [Buttons](https://getbootstrap.com/docs/4.5/components/buttons/)
+
+> We kunnen met Bootstrap snel mooie buttons maken door bv. `class="btn btn-primary"` toe te voegen aan een `<button>` element. Meer voorbeelden: <br/> <img src="images/buttons.png" width=600px>
+
+Er zijn nog veel componenten in bootstrap. Hiervoor ga je best naar de workshop `02_bootstrap_workshop.pdf` of naar de boostrap website.
