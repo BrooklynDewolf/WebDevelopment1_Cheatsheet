@@ -649,10 +649,10 @@ div,p {
 > - `:first-of-type` het eerste element van dat type
 > - `:last-of-type` het laatste element van dat type
 > - `:only-of-type` het enige element van dat type
-> - `:nth-child(n)` elk zoveelste kindelement
-> - `:nth-last-child(n)` nu gerekend vanaf het laatste kind
-> - `:nth-of-type(n)` elk zoveelste element van een type
-> - `:nth-last-of-type(n)` nu gerekend vanaf laatste element
+> - `:nth-child(n)` elk zoveelste kindelement (je kan ook `odd` oneven of `even` even gebruiken)
+> - `:nth-last-child(n)` nu gerekend vanaf het laatste kind (je kan ook `odd` oneven of `even` even gebruiken)
+> - `:nth-of-type(n)` elk zoveelste element van een type (je kan ook `odd` oneven of `even` even gebruiken)
+> - `:nth-last-of-type(n)` nu gerekend vanaf laatste element (je kan ook `odd` oneven of `even` even gebruiken)
 > - `:empty` leeg element
 
 > **Pseudo elementen** <br/>
@@ -1280,6 +1280,8 @@ li:nth-child(1) {
 > - [`word-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing) ruimte tussen woorden
 > - [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) automatisch afbreken
 > - [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap) is afbreken van een woord toegestan
+> - [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) afstand tussen regels
+> - [`border-bottom`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom) versiering lijn van de box
 
 <br/>
 
