@@ -705,12 +705,13 @@ a::before {
 > - `border-box` <br/>
 >   Ingestelde width en height hebben betrekking op de **content** + **padding** + de **border**.
 
-> Eigenschappen [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) en [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+> Eigenschappen [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) en [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) (niet bij inline tekst)
 >
 > - `auto` (standaardwaarde) box is zo groot dat de inhoud erin past
 > - `lengte of percentage`
 > - `max-content` afmeting van het grootste item in de box
 > - `min-content` de kleinst mogelijke afmeting zonder overloop te veroorzaken
+
 
 > Eigenschappen [`min-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width), [`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width), [`min-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height) en [`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height). <br/>
 > Deze waarden overriden `width` en `height`. <br/>
@@ -747,13 +748,15 @@ margin: 2px 1em 0 auto;
 
 > **Opgelet**: Marges worden aan de onder en bovenkant samengevoegd, zodat er geen dubbele marges ontstaan. Wanneer de bottom margin van een element de top margin van een ander element overlapt, is het resultaat **NIET** de som, maar **de grootste margin**.
 
+> **Belangrijk**: om een gewone box te centreren, kunnen we de [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) waarde op `auto` zetten!
+
 <br/>
 
 ### 2.7.3 Borders
 
 > Van een border kunnen we 3 waarden instellen:
 >
-> - [`border-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-width) (px, %, em, rem, thin, medium, thick)
+> - [`border-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-width) (px, %, em, rem, thin, medium, thick) (top/right/left/bottom)
 > - [`border-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style) (none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset)
 > - [`border-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-color) (een kleurwaarde of _transparent_)
 >
@@ -763,7 +766,8 @@ margin: 2px 1em 0 auto;
 > border: 1px solid black;
 > ```
 >
-> De volgorde maakt niet uit.
+> De volgorde maakt niet uit. <br/>
+> Aparte randen kunnen ook gedefinieerd worden met `border-left`, `border-right`, `border-top`, `border-bottom.`
 
 <br/>
 
@@ -794,6 +798,8 @@ a {
   visibility: hidden;
 }
 ```
+
+> Het is mogelijk dat `collapse` niet altijd de witruimte weglaat (bv. bij inline elementen). Om dit te overkomen kunnen we `display: none` gebruiken.
 
 <br/>
 
@@ -1067,6 +1073,8 @@ a {
 >     - [`aligin-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) verticaal uitlijnen
 >
 > Voorbeeld: <br/> <img src="images/uitlijning.png" width="650px">
+>
+> **Belangrijk**: om een gewone box te centreren, kunnen we de `margin` waarde op `auto` zetten!
 
 <br/>
 
