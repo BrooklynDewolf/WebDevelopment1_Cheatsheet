@@ -252,6 +252,8 @@
             olifant1920.jpg 3x">
 ```
 
+> In CSS kunnen we een afbeelding de volledige grootte van zijn parent container laten innemen door zowel de `width` als `height` op `100%` te zetten.
+
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">HTML video</a>
 <br/>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">HTML audio</a>
@@ -712,7 +714,6 @@ a::before {
 > - `max-content` afmeting van het grootste item in de box
 > - `min-content` de kleinst mogelijke afmeting zonder overloop te veroorzaken
 
-
 > Eigenschappen [`min-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width), [`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width), [`min-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height) en [`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height). <br/>
 > Deze waarden overriden `width` en `height`. <br/>
 >
@@ -825,6 +826,8 @@ a {
 >   Het element wordt uit de normale flow gehaald en er wordt dus geen plaats voorzien. Zijn positie is relatief aan de [`viewport`](https://developer.mozilla.org/en-US/docs/Glossary/viewport). Dit betekent dat bij scrollen het element blijft staan.
 > - `sticky` <br/>
 >   Het element varieert tussen `relative` en `fixed` afhankelijk van de scrollpositie. Zijn positie is relatief aan zijn dichtsbijzijnde scrolling voorouder (bijvoorbeeld een element met scrollbar door overflow). Als je verder scrollt zal deze blijven plakken en meegaan als `fixed` element.
+>
+> Met de eigenschappen `top`, `bottom`,... kan je de positie instellen van het element. Om het element voor of achter een element weer te geven kan je [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) gebruiken.
 
 > **Offset eigenschap**
 >
@@ -1072,6 +1075,8 @@ a {
 >     - [`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self) horizontaal uitlijnen
 >     - [`aligin-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) verticaal uitlijnen
 >
+> Automatisch staat deze waarde op `stretch` (volledig vullen van de cel).
+>
 > Voorbeeld: <br/> <img src="images/uitlijning.png" width="650px">
 >
 > **Belangrijk**: om een gewone box te centreren, kunnen we de `margin` waarde op `auto` zetten!
@@ -1101,9 +1106,11 @@ a {
 > De container wordt opgevuld langs de **main-axis**.
 > <br/> <img src="images/flexcontainer.png" width=500px>
 
-> **Overflow** <br/>
+> **Overflow (flex wrap)** <br/>
 > Overflow van inhoud wordt geregeld met [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (nowrap/wrap/wrap-reverse).
 > <br/> Afgekort [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow).
+
+<br/>
 
 ### 2.11.3 Uitlijning
 
@@ -1121,7 +1128,8 @@ a {
 >     - [`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self) (stretch/start/center/end/base-line) uitlijnen langs main axis
 >     - [`aligin-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) (stretch/start/center/end/base-line) uitlijnen langs cross axis
 
-<br/>
+> Je kan bij flex-items makkelijk de tussenruimte verdelen met [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) op `space-between`, `space-evenly` of `space-around` te zetten.
+> <br/>
 
 ### 2.11.4 Volgorde items & grootte
 
@@ -1144,6 +1152,7 @@ a {
 > flex: 2 1 auto;
 > ```
 >
+> **Handig voorbeeld**: Om alle flex cellen even lang te maken over de breedte van een pagina, kan men de `flex-basis` op 0 zetten en de `flex-grow` op 1.
 > <br/>
 
 <br/>
