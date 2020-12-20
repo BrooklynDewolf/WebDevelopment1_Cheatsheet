@@ -262,6 +262,8 @@
 
 ## 1.9 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Tabellen</a>
 
+### 1.9.1 Algemeen
+
 > Iedere tabel start met de root tag `<table>`. Daaronder komen rijen met de `<tr>` tag en daarin kolommen met de `<td>` tag (je definiëert dus per rij, kolommen).
 
 <table>
@@ -325,6 +327,16 @@
     </tr>
 </table>
 ```
+
+> **TIP**: In CSS kunnen wet met `border-collapse: collapse` dubbele borders enkelvoudig maken.
+
+<br/>
+
+### 1.9.2 Tabelbijschrift
+
+> Men kan bij tabellen een bijschrift plaatsen. Dit doen we met het [`<caption>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption) element. We zetten deze net binnen het `<table>` element.
+>
+> Je kan de caption-positie aanpassen in CSS met `caption-side`.
 
 <br/>
 
