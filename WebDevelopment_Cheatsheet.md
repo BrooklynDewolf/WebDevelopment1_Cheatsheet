@@ -416,6 +416,12 @@
 > <br/>- [`<optgroup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup): groeperen van keuzemogelijkheden
 > <br/>- [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select): keuzelijst
 > <br/>- [`<datalist>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist): keuzelijst met invoervak
+> <br/>- [`<legend>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend): een legende toewijzen aan een formulier (tekst vanboven)
+
+> TIP: <br/> Als je van een formulier een flex box maakt, kan je de input boxes mooi aligneren.
+>
+> - Gehele formulier op `display: flex` zetten
+> - Flex value van bv. 1 toekennen aan label met `flex: 1`.
 
  <br/>
 
