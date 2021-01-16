@@ -258,6 +258,8 @@
 <br/>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">HTML audio</a>
 
+> Om captions bij een afbeelding te plaatsen gebruiken we de `<figure>` en `<figcaption>` tags (zie puntje 1.6.3 in dit document).
+
 <br/>
 
 ## 1.9 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Tabellen</a>
@@ -417,6 +419,14 @@
 > <br/>- [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select): keuzelijst
 > <br/>- [`<datalist>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist): keuzelijst met invoervak
 > <br/>- [`<legend>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend): een legende toewijzen aan een formulier (tekst vanboven)
+
+>Om een groot tekstvak te creëren maakt men gebruik van de `<textarea>` tag. Om het tekstvak onder het label  te zetten kan je `<br>` gebruiken. Voorbeeld:
+```HTML
+<div>
+  <label for="reden">Reden afspraak: <br></label>
+  <textarea name="reden" id="reden" cols="60" rows="5">Dit is placeholder tekst</textarea>
+</div>
+```
 
 > TIP: <br/> Als je van een formulier een flex box maakt, kan je de input boxes mooi aligneren.
 >
@@ -613,9 +623,6 @@ div,p {
 }
 ```
 
-> **Combinatieselector (A,B)** <br/>
-> Ieder `<p>` en `<div>` element kleurt oranje. Op welk niveau dan ook.
-
 ```CSS
 div,p {
   color: orange;
@@ -633,6 +640,9 @@ div,p {
 | ^=    | Begint met exacte waarde  | [name^="keuze"]      | name attribuut begint met het exacte woord "keuze" (bv. keuzevak of keuze2)            |
 | $=    | Eindigt met exacte waarde | [href$=".com"]       | href attribuut eindigt op ".com" (bv. google.com)                                      |
 | \*=   | Bevat exacte waarde       | [href\*="user"]      | href attribuut bevat het exacte woord "user" (bv. hogent.be/user/jan)                  |
+
+> **TIP:**
+> Door `:not()` te gebruiken achter een selector kan je een element selecteren waar een voorwaarde NIET van waar is. Voorbeeld: `a:not([href])`.
 
 <br/>
 
