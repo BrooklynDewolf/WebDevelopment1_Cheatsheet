@@ -342,7 +342,7 @@
 
 <br/>
 
-## 1.10 [Formulieren](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+## 1.10 [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
 > Met de `<form>` tag kunnen we een inputformulier maken. Met het attribuut `action` zeggen we naar welke URL het formulier moet gestuurd worden. Met het attribuut `method` zeggen we de methode van versturen. Dit of `get` (toevoegen aan url) of `post` (toevoegen aan header van HTTP request).
 
@@ -434,6 +434,32 @@
 > - Flex value van bv. 1 toekennen aan label met `flex: 1`.
 
  <br/>
+
+### 1.10.1 [Fieldset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
+
+> We gebruiken het [`<fieldset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) element om rond een formulier een box te tekenen met eventueel een legenda. Voorbeeld:
+
+```HTML
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster">
+    <label for="kraken">Kraken</label><br/>
+
+    <input type="radio" id="sasquatch" name="monster">
+    <label for="sasquatch">Sasquatch</label><br/>
+
+    <input type="radio" id="mothman" name="monster">
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+wordt:
+
+<img src="images/fieldset.png" width=300px></img>
+
 
 # 2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
