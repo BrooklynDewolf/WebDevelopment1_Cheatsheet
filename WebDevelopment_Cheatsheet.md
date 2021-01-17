@@ -1119,6 +1119,16 @@ a {
 >
 > **Belangrijk**: om een gewone box te centreren, kunnen we de `margin` waarde op `auto` zetten!
 
+> **TIP:** Om elementen in hun respectievelijke cel zowel horizontaal als verticaal te centreren, maken we van het element een grid container met `display: grid` en gebruiken we `justify-items: center` en `align-items: center`. Voorbeeld:
+
+```CSS
+.grid-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+```
+
 <br/>
 
 ## 2.11 [Flex container](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
