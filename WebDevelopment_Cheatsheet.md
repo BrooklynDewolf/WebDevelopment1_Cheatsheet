@@ -348,22 +348,6 @@
 
 <br/>
 
-<form action="" method="get" class="form-example">
-  <div class="form-example">
-    <label for="name">Enter your name: </label>
-    <input type="text" name="name" id="name" required>
-  </div>
-  <div class="form-example">
-    <label for="email">Enter your email: </label>
-    <input type="email" name="email" id="email" required>
-  </div>
-  <div class="form-example">
-    <input type="submit" value="Subscribe!">
-  </div>
-</form>
-
-<br/>
-
 > Ieder veld stoppen we in een `div` element. Om de tekst voor het veld te krijgen, gebruiken we `label` met daarin een link naar het inputveld met `for` (met het `id` van het `input` veld).
 
 ```HTML
@@ -420,7 +404,8 @@
 > <br/>- [`<datalist>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist): keuzelijst met invoervak
 > <br/>- [`<legend>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend): een legende toewijzen aan een formulier (tekst vanboven)
 
->Om een groot tekstvak te creëren maakt men gebruik van de `<textarea>` tag. Om het tekstvak onder het label  te zetten kan je `<br>` gebruiken. Voorbeeld:
+> Om een groot tekstvak te creëren maakt men gebruik van de `<textarea>` tag. Om het tekstvak onder het label te zetten kan je `<br>` gebruiken. Voorbeeld:
+
 ```HTML
 <div>
   <label for="reden">Reden afspraak: <br></label>
@@ -459,7 +444,6 @@
 wordt:
 
 <img src="images/fieldset.png" width=300px></img>
-
 
 # 2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
