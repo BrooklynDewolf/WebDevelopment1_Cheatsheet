@@ -342,7 +342,7 @@
 
 <br/>
 
-## 1.10 [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+## 1.10 [Formulieren](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
 > Met de `<form>` tag kunnen we een inputformulier maken. Met het attribuut `action` zeggen we naar welke URL het formulier moet gestuurd worden. Met het attribuut `method` zeggen we de methode van versturen. Dit of `get` (toevoegen aan url) of `post` (toevoegen aan header van HTTP request).
 
